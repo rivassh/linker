@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LinkController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [LinkController::class,'index']);
+Route::get('/create', [LinkController::class,'create']);
+Route::get('/store', [LinkController::class,'store']);
+Route::get('/{source}', [LinkController::class,'redirect']);
