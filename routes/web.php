@@ -16,4 +16,5 @@ use App\Http\Controllers\LinkController;
 Route::get('/', [LinkController::class,'index']);
 Route::get('/create', [LinkController::class,'create']);
 Route::get('/store', [LinkController::class,'store']);
+Route::get('/301/{url}',function($url){dd($url);});
 Route::get('/{source}', [LinkController::class,'redirect']);

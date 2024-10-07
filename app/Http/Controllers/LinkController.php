@@ -111,6 +111,10 @@ class LinkController extends Controller
                 'ip'      => \request()->ip(),
             ])
         );
-        return redirect($destination, 302);
+	if (strpos($destination , 'http') === 0) {
+           return redirect($destination, 302);
+	}else{
+		return response($destination, 200)->header('Content-Type', 'text/html');
+	}
     }
 }

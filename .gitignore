@@ -13,3 +13,9 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+awstats
+stats
+index.php
+private_html
+cgi-bin
+robots.txt
